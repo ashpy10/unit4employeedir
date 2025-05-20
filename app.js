@@ -12,10 +12,10 @@ app.route('/employees').get((req, res) =>{
 
 
 app.route('/employees/random').get((req, res) => {
-    console.log("Employees data:", employees);  // Log the full employees array
+    console.log("Employees data:", employees);  
 
     let randomEmployee = employees[Math.floor(Math.random() * employees.length)];
-    console.log("Random employee selected:", randomEmployee);  // Log the selected employee
+    console.log("Random employee selected:", randomEmployee); 
 
     if (randomEmployee && randomEmployee.id && randomEmployee.name) {
         res.send(randomEmployee);
